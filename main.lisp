@@ -5,13 +5,10 @@
 (in-package #:charm)
 
 (defun main ()
-  "Entry point for the Charm game."
-  (format t "Welcome to Charm!~%")
-  (format t "Game starting...~%")
-  ; Game logic goes here
-  )
+  (load "game.lisp")
+  (load "gui.lisp")
+  (charm-gui:start-html-game 4))
 
-; For running the game
 (when (string= (pathname-name *load-pathname*)
                "main")
   (main))
