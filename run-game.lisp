@@ -1,6 +1,7 @@
 #!/usr/bin/env sbcl --script
 
-(load "game.lisp")
-(load "gui.lisp")
-(charm-gui:start-html-game 4)
+(handler-bind ((warning #'muffle-warning))
+  (load "game.lisp")
+  (load "gui.lisp")
+  (funcall (find-symbol "START-HTML-GAME" :charm-gui) 4))
 

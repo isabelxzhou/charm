@@ -44,15 +44,15 @@
       (format out "<h2>Player ~D</h2>" i)
       (format out "<div class='hand'>")
       (loop for card in hand do
-        (format out "<div class='card ~(~A~)'>" (card-color card))
-        (format out "<div>~A</div>" (card-number card))
+        (format out "<div class='card ~(~A~)'>" (charm:card-color card))
+        (format out "<div>~A</div>" (charm:card-number card))
         (format out "</div>"))
       (format out "</div></div>~%"))
     
     (princ "</body></html>" out)))
 
 (defun start-html-game (&optional (num-players 4))
-  (let* ((deck (make-deck))
-         (hands (deal-cards deck num-players 6)))
+  (let* ((deck (charm:make-deck))
+         (hands (charm:deal-cards deck num-players 6)))
     (generate-html-gui hands)))
 

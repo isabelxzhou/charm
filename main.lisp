@@ -5,9 +5,10 @@
 (in-package #:charm)
 
 (defun main ()
-  (load "game.lisp")
-  (load "gui.lisp")
-  (charm-gui:start-html-game 4))
+  (handler-bind ((warning #'muffle-warning))
+    (load "game.lisp")
+    (load "gui.lisp")
+    (funcall (find-symbol "START-HTML-GAME" :charm-gui) 4)))
 
 (when (string= (pathname-name *load-pathname*)
                "main")
