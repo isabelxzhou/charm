@@ -1,0 +1,41 @@
+# Compiled Lisp artifacts
+*.fasl
+*.fsl
+*.fsl64
+*.fas
+*.lib
+*.lx32fsl
+*.lx64fsl
+*.64xfasl
+*.axpfasl
+*.pfsl
+*.cfasl
+
+# ASDF build artifacts
+*.asd.asd
+.asdf.user
+
+# Emacs backup files
+*~
+\#*\#
+.\#*
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+bin/
+
+# Temporary files
+tmp/
+temp/
+
